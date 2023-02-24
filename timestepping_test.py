@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 import time
 
-x_lower = -15
-x_upper = 15
+x_lower = -20
+x_upper = 20
 y_lower = -5
 y_upper = 5
 delta_x = 0.1
@@ -28,7 +28,7 @@ def wave_deriv_init(x):
 def wave_speed_func(x):
     if x < 0.0:
         return 1.0
-    elif 0.0<x<5.0:
+    elif 0.0<=x<5.0:
         return 0.5
     else:
         return 1.0
@@ -42,6 +42,9 @@ fig.show()
 
 x_vals = [wave_sim.x_lower + i * delta_x for i in range(wave_sim.last_index)]
 speed_vals = [wave_sim.wave_speed_func(x) for x in x_vals]
+print (wave_sim.calc_max_wave_speed())
+
+time_max = 0.5
 for i in range(2000):
     plt.clf()
     y_vals = wave_sim.wave
