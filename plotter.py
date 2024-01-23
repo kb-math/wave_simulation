@@ -29,7 +29,7 @@ def plot_spacetime_function(func, x_delta = 0.1, t_delta = 0.1,
             plt.axis([x_lims[0], x_lims[1], y_lims[0], y_lims[1]])
             fig.canvas.draw()
             t += t_delta
-            time.sleep(t_delta)
+            plt.pause(t_delta)
 
 def sign_colour_rule(x,t):
     if (x<0):

@@ -57,4 +57,4 @@ for i in range(2000):
     fig.canvas.draw()
 
     wave_sim.iterate()
-    time.sleep(delta_t)
+    plt.pause(delta_t)
