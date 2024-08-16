@@ -51,7 +51,8 @@ This means that the wave speed will be $0.5$ in the region $0 \leq x \leq 5$ and
 
 Now create the simulation object by supplying these functions to the constructor (along with some other parameters):
 
-```wave_sim = WaveSimulation(wave_init, wave_deriv_init, wave_speed_func,
+```
+wave_sim = WaveSimulation(wave_init, wave_deriv_init, wave_speed_func,
         delta_x, delta_t, x_lower, x_upper)
 ```
 
